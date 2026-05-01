@@ -298,7 +298,7 @@ html, body { overflow-x: clip; }
 
 @media (max-width: 767px) {
   .da-hero-wrap {
-    padding: var(--da-space-3) var(--da-space-4) var(--da-space-8);
+    padding: var(--da-space-3) var(--da-space-4) var(--da-space-12);
     min-height: auto;
   }
 }
@@ -316,7 +316,7 @@ html, body { overflow-x: clip; }
 
 .da-hero__title {
   font-family: var(--da-serif);
-  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  font-size: clamp(1.625rem, 5.5vw + 0.25rem, 4.25rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0 0 var(--da-space-6) 0;
@@ -331,7 +331,7 @@ html, body { overflow-x: clip; }
 }
 
 .da-hero__subhead {
-  font-size: 1.0625rem;
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.0625rem);
   line-height: 1.6;
   color: var(--da-ink2);
   margin: 0 0 var(--da-space-8) 0;
@@ -474,9 +474,8 @@ html, body { overflow-x: clip; }
 
 @media (max-width: 767px) {
   .da-hero { grid-template-columns: 1fr; gap: var(--da-space-3); }
-  .da-hero__title { white-space: normal; font-size: 1.875rem; margin-bottom: var(--da-space-3); }
+  .da-hero__title { white-space: normal; margin-bottom: var(--da-space-3); }
   .da-hero__subhead {
-    font-size: 0.9375rem;
     line-height: 1.55;
     margin-bottom: var(--da-space-4);
   }
