@@ -278,8 +278,8 @@ html, body { overflow-x: clip; }
 
 .da-eyebrow {
   font-family: var(--da-mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.15em;
+  font-size: clamp(0.625rem, 0.45vw + 0.55rem, 0.8125rem);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--da-oxide);
   margin: 0 0 var(--da-space-6) 0;
@@ -331,7 +331,7 @@ html, body { overflow-x: clip; }
 }
 
 .da-hero__subhead {
-  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.0625rem);
+  font-size: clamp(0.8125rem, 1vw + 0.55rem, 1.0625rem);
   line-height: 1.6;
   color: var(--da-ink2);
   margin: 0 0 var(--da-space-8) 0;
@@ -483,7 +483,7 @@ html, body { overflow-x: clip; }
   .da-hero__mark {
     order: 1;
     width: 100%;
-    max-width: 150px;
+    max-width: 190px;
     justify-self: center;
     margin: 0 auto;
   }
