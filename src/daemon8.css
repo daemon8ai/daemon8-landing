@@ -484,8 +484,8 @@ html, body { overflow-x: clip; }
     order: 1;
     width: 100%;
     max-width: 190px;
-    justify-self: center;
-    margin: 0 auto;
+    justify-self: start;
+    margin: 0;
   }
   .da-hero__mark-svg { display: block; width: 100%; }
   .da-hero__mark-svg svg { width: 100%; height: auto; display: block; }
