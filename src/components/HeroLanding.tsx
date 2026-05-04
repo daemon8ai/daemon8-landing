@@ -36,7 +36,7 @@ export function HeroLanding() {
             <div className="da-hero__content">
               <p className="da-eyebrow">· A runtime layer made for AI agents</p>
               <h1 className="da-hero__title">
-                Context converges. Agents <em>react</em>.
+                Context, <em>Evolved</em>.
               </h1>
               <ul className="da-hero__points">
                 <li><span className="da-hero__points-mark">·</span> One place to send logs, errors, and communications.</li>
