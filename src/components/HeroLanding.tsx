@@ -63,7 +63,7 @@ export function HeroLanding() {
                   </a>
                 </li>
               </ul>
-              <p className="da-hero__alpha-tag">Alpha release</p>
+              <p className="da-hero__alpha-tag">In active development</p>
               <p className="da-hero__points-footnote">
                 <span className="da-hero__points-asterisk">*</span> Forthcoming
               </p>

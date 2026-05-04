@@ -22,7 +22,7 @@ const STRUCTURED_DATA = JSON.stringify({
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'macOS, Linux, Windows',
   softwareVersion: 'alpha',
-  releaseNotes: 'Alpha release. APIs may change.',
+  releaseNotes: 'In active development. APIs may change.',
   offers: {
     '@type': 'Offer',
     price: '0',
