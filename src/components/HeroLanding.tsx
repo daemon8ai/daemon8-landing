@@ -1,107 +1,78 @@
 import { Daemon8Mark } from './Daemon8Mark'
-import { useTheme } from '../lib/useTheme'
 
 const REPO_URL = 'https://github.com/daemon8ai/daemon8'
 
 function GitHubIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2.05c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.16 1.17a10.97 10.97 0 0 1 5.76 0c2.2-1.48 3.16-1.17 3.16-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12c0-6.35-5.15-11.5-11.5-11.5z" />
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
     </svg>
   )
 }
 
-function SunIcon() {
+function XIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )
+}
+
+function MailIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
-  )
-}
-
-function MoonIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-    </svg>
-  )
-}
-
-function ThemeToggle({ theme, onToggle }: { theme: 'light' | 'dark'; onToggle: () => void }) {
-  return (
-    <button
-      type="button"
-      className={`da-theme-toggle da-theme-toggle--${theme}`}
-      onClick={onToggle}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-    >
-      {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-    </button>
-  )
-}
-
-function Wordmark() {
-  return (
-    <a href={REPO_URL} className="da-insignia" aria-label="daemon(8)">
-      <span>DAEMON</span>
-      <span className="da-insignia__paren">(8)</span>
-    </a>
   )
 }
 
 export function HeroLanding() {
-  const { theme, toggle } = useTheme()
-
   return (
     <div className="da-root">
-      <nav className="da-nav">
-        <Wordmark />
-        <div className="da-nav__mobile-actions">
-          <ThemeToggle theme={theme} onToggle={toggle} />
-        </div>
-        <div className="da-nav__links">
-          <ThemeToggle theme={theme} onToggle={toggle} />
-        </div>
-      </nav>
-
       <main className="da-content">
-        <section className="da-hero-wrap">
+        <section id="name" className="da-hero-wrap">
           <div className="da-hero">
             <div className="da-hero__content">
-              <p className="da-eyebrow">· The admin layer for AI agents</p>
+              <p className="da-eyebrow">· A runtime layer made for AI agents</p>
               <h1 className="da-hero__title">
-                Observe. Act. <em>Coordinate.</em>
+                Context converges. Agents <em>react</em>.
               </h1>
-              <p className="da-hero__subhead">
-                Your agent can read a codebase in seconds
-                but has no view into the runtime context flowing
-                from your browser, devices, and applications.
-                <br /><br />
-                Daemon8 provides a single local-first stream
-                for all this context to converge — giving every agent
-                the ability to access robust runtime context immediately,
-                without needing to guess where it is anymore.
-                <br /><br />
-                Powered by Rust and SurrealDB, 100% open source.
+              <ul className="da-hero__points">
+                <li><span className="da-hero__points-mark">·</span> One place to send logs, errors, and communications.</li>
+                <li><span className="da-hero__points-mark">·</span> Realtime browser, ADB, and Vega OS error access.</li>
+                <li><span className="da-hero__points-mark">·</span> Live subscriptions and inboxes for agent-to-agent coordination.</li>
+                <li><span className="da-hero__points-mark">·</span> Bookkeeper-curated memory with semantic recall.<sup className="da-hero__points-asterisk">*</sup></li>
+                <li><span className="da-hero__points-mark">·</span> Background specialist and steward agents for long-running work.<sup className="da-hero__points-asterisk">*</sup></li>
+                <li><span className="da-hero__points-mark">·</span> One simple MCP surface.</li>
+              </ul>
+              <ul className="da-link-list">
+                <li>
+                  <a href={REPO_URL}>
+                    <GitHubIcon /> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/daemon8ai">
+                    <XIcon /> @daemon8ai
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:mail@daemon8.ai">
+                    <MailIcon /> mail@daemon8.ai
+                  </a>
+                </li>
+              </ul>
+              <p className="da-hero__alpha-tag">Alpha release</p>
+              <p className="da-hero__points-footnote">
+                <span className="da-hero__points-asterisk">*</span> Forthcoming
               </p>
-              <div className="da-hero__cta-stack">
-                <a
-                  href={REPO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="da-cta-button"
-                >
-                  <GitHubIcon />
-                  View Repo
-                </a>
-              </div>
             </div>
             <div className="da-hero__mark">
               <span className="da-hero__mark-svg"><Daemon8Mark size={360} /></span>
               <img
                 className="da-hero__mark-img"
-                src={theme === 'dark' ? '/assets/brand/mark-dark.svg' : '/assets/brand/mark-light.svg'}
+                src="/assets/brand/mark-dark.svg"
                 alt="DAEMON(8) mark"
                 width={320}
                 height={336}

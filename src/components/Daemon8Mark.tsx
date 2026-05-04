@@ -44,10 +44,10 @@ export function Daemon8Mark({ size = 320, variant = "primary" }: MarkProps) {
       role="img"
       aria-label="DAEMON(8) mark"
     >
-      <text x={tickX1} y={tickY1 - labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} letterSpacing={0.8}>FIG. 1</text>
-      <text x={tickX2} y={tickY1 - labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} textAnchor="end" letterSpacing={0.8}>ADMIN MARK</text>
-      <text x={tickX1} y={tickY2 + labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} letterSpacing={0.8} dominantBaseline="hanging">PID 8</text>
-      <text x={tickX2} y={tickY2 + labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} textAnchor="end" letterSpacing={0.8} dominantBaseline="hanging">ONLINE</text>
+      <text x={tickX1} y={tickY1 - labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} letterSpacing={0.8}>DELIBER8</text>
+      <text x={tickX2} y={tickY1 - labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} textAnchor="end" letterSpacing={0.8}>RUST</text>
+      <text x={tickX1} y={tickY2 + labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} letterSpacing={0.8} dominantBaseline="hanging">UPLINK8</text>
+      <text x={tickX2} y={tickY2 + labelGap} fontFamily="JetBrains Mono, monospace" fontSize={size * 0.026} fill={colors.mute} textAnchor="end" letterSpacing={0.8} dominantBaseline="hanging">SURREALDB</text>
 
       {[
         { ax: tickX1, ay: tickY1, hx: 1, vy: 1 },
