@@ -39,11 +39,11 @@ export function HeroLanding() {
                 Context, <em>Evolved</em>.
               </h1>
               <ul className="da-hero__points">
-                <li><span className="da-hero__points-mark">·</span> One place to send logs, errors, and communications.</li>
+                <li><span className="da-hero__points-mark">·</span> One place to send logs, errors, and runtime observations.</li>
                 <li><span className="da-hero__points-mark">·</span> Realtime browser, ADB, and Vega OS error access.</li>
-                <li><span className="da-hero__points-mark">·</span> Live subscriptions and inboxes for agent-to-agent coordination.</li>
-                <li><span className="da-hero__points-mark">·</span> Bookkeeper-curated memory with semantic recall.<sup className="da-hero__points-asterisk">*</sup></li>
-                <li><span className="da-hero__points-mark">·</span> Background specialist and steward agents for long-running work.<sup className="da-hero__points-asterisk">*</sup></li>
+                <li><span className="da-hero__points-mark">·</span> Checkpoints and lenses for focused before-and-after debugging.</li>
+                <li><span className="da-hero__points-mark">·</span> CLI hooks that capture what agents actually did.</li>
+                <li><span className="da-hero__points-mark">·</span> Curated memory for verified lessons and decisions.</li>
                 <li><span className="da-hero__points-mark">·</span> One simple MCP surface.</li>
               </ul>
               <ul className="da-link-list">
@@ -64,9 +64,6 @@ export function HeroLanding() {
                 </li>
               </ul>
               <p className="da-hero__alpha-tag">In active development</p>
-              <p className="da-hero__points-footnote">
-                <span className="da-hero__points-asterisk">*</span> Forthcoming
-              </p>
             </div>
             <div className="da-hero__mark">
               <span className="da-hero__mark-svg"><Daemon8Mark size={360} /></span>

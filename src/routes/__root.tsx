@@ -8,7 +8,7 @@ const SITE_URL = 'https://daemon8.ai'
 const SITE_NAME = 'Daemon8'
 const TITLE = 'Daemon8 — A runtime layer made for AI agents'
 const DESCRIPTION =
-  'Context, evolved. A local-first runtime layer for AI agents — one place to send logs, errors, and communications, with realtime browser, ADB, and Vega OS access. Powered by Rust and SurrealDB. Open source.'
+  'Context, evolved. A local-first runtime layer for AI agents — one place to send logs, errors, browser state, device state, hooks, and runtime observations. Powered by Rust and SurrealDB. Open source.'
 const OG_IMAGE = `${SITE_URL}/assets/brand/social/og-image.png`
 
 const THEME_INIT_SCRIPT = `document.documentElement.classList.add('da-dark');document.documentElement.style.colorScheme='dark';`
