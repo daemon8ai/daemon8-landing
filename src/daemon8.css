@@ -316,11 +316,10 @@ html, body { overflow-x: clip; }
 
 .da-hero__title {
   font-family: var(--da-serif);
-  font-size: clamp(1.625rem, 5.5vw + 0.25rem, 4.25rem);
+  font-size: clamp(1.625rem, 4vw + 0.25rem, 3rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0 0 var(--da-space-6) 0;
-  white-space: nowrap;
   color: var(--da-ink);
   font-weight: 400;
 }

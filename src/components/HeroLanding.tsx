@@ -39,12 +39,12 @@ export function HeroLanding() {
                 Situational Awareness For AI Agents
               </h1>
               <ul className="da-hero__points">
-                <li><span className="da-hero__points-mark">·</span> One stream for logs, errors, browser output, and device events.</li>
-                <li><span className="da-hero__points-mark">·</span> Checkpoints and lenses that let agents see exactly what changed.</li>
-                <li><span className="da-hero__points-mark">·</span> CLI hooks that record what your agent actually did.</li>
-                <li><span className="da-hero__points-mark">·</span> Memory for verified fixes, patterns, and decisions.</li>
-                <li><span className="da-hero__points-mark">·</span> Works with Claude Code, Codex, Gemini CLI, Cursor, and Windsurf.</li>
-                <li><span className="da-hero__points-mark">·</span> One MCP surface. Everything stays local.</li>
+                <li><span className="da-hero__points-mark">·</span> Live-streams logs, browser output, and device events into one observation feed.</li>
+                <li><span className="da-hero__points-mark">·</span> Eight built-in parsers ingest multiple log formats out of the box.</li>
+                <li><span className="da-hero__points-mark">·</span> CLI hooks capture tool calls so agents see cause and effect.</li>
+                <li><span className="da-hero__points-mark">·</span> Checkpoints, lenses, and debug sessions for focused investigation.</li>
+                <li><span className="da-hero__points-mark">·</span> Persistent memory and a librarian index for local context cataloging.</li>
+                <li><span className="da-hero__points-mark">·</span> 29 MCP tools. Every feature opt-in. Everything stays local.</li>
               </ul>
               <ul className="da-link-list">
                 <li>
@@ -63,7 +63,7 @@ export function HeroLanding() {
                   </a>
                 </li>
               </ul>
-              <p className="da-hero__alpha-tag">In active development</p>
+              <p className="da-hero__alpha-tag">v0.3 alpha — in active development</p>
             </div>
             <div className="da-hero__mark">
               <span className="da-hero__mark-svg"><Daemon8Mark size={360} /></span>
