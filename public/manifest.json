@@ -1,7 +1,7 @@
 {
   "name": "Daemon8",
   "short_name": "Daemon8",
-  "description": "A runtime layer made for AI agents.",
+  "description": "Situational awareness for AI agents.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#1a1714",

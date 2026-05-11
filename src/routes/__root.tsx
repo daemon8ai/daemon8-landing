@@ -6,9 +6,9 @@ import daemon8Css from '../daemon8.css?url'
 
 const SITE_URL = 'https://daemon8.ai'
 const SITE_NAME = 'Daemon8'
-const TITLE = 'Daemon8 — A runtime layer made for AI agents'
+const TITLE = 'Daemon8 — Situational awareness for AI agents'
 const DESCRIPTION =
-  'Context, evolved. A local-first runtime layer for AI agents — one place to send logs, errors, browser state, device state, hooks, and runtime observations. Powered by Rust and SurrealDB. Open source.'
+  'Daemon8 gives AI agents one place to see logs, errors, browser state, and device events while they work. Local-first. Open source.'
 const OG_IMAGE = `${SITE_URL}/assets/brand/social/og-image.png`
 
 const THEME_INIT_SCRIPT = `document.documentElement.classList.add('da-dark');document.documentElement.style.colorScheme='dark';`
@@ -55,7 +55,7 @@ export const Route = createRootRoute({
       { property: 'og:image', content: OG_IMAGE },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: 'Daemon8 — a runtime layer made for AI agents' },
+      { property: 'og:image:alt', content: 'Daemon8 — Situational awareness for AI agents' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@daemon8ai' },
@@ -63,7 +63,7 @@ export const Route = createRootRoute({
       { name: 'twitter:title', content: TITLE },
       { name: 'twitter:description', content: DESCRIPTION },
       { name: 'twitter:image', content: OG_IMAGE },
-      { name: 'twitter:image:alt', content: 'Daemon8 — a runtime layer made for AI agents' },
+      { name: 'twitter:image:alt', content: 'Daemon8 — Situational awareness for AI agents' },
     ],
     links: [
       { rel: 'canonical', href: SITE_URL },

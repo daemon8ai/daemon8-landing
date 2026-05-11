@@ -36,15 +36,15 @@ export function HeroLanding() {
             <div className="da-hero__content">
               <p className="da-eyebrow">· A runtime layer made for AI agents</p>
               <h1 className="da-hero__title">
-                Context, <em>Evolved</em>.
+                Situational Awareness For AI Agents
               </h1>
               <ul className="da-hero__points">
-                <li><span className="da-hero__points-mark">·</span> One place to send logs, errors, and runtime observations.</li>
-                <li><span className="da-hero__points-mark">·</span> Realtime browser, ADB, and Vega OS error access.</li>
-                <li><span className="da-hero__points-mark">·</span> Checkpoints and lenses for focused before-and-after debugging.</li>
-                <li><span className="da-hero__points-mark">·</span> CLI hooks that capture what agents actually did.</li>
-                <li><span className="da-hero__points-mark">·</span> Curated memory for verified lessons and decisions.</li>
-                <li><span className="da-hero__points-mark">·</span> One simple MCP surface.</li>
+                <li><span className="da-hero__points-mark">·</span> One stream for logs, errors, browser output, and device events.</li>
+                <li><span className="da-hero__points-mark">·</span> Checkpoints and lenses that let agents see exactly what changed.</li>
+                <li><span className="da-hero__points-mark">·</span> CLI hooks that record what your agent actually did.</li>
+                <li><span className="da-hero__points-mark">·</span> Memory for verified fixes, patterns, and decisions.</li>
+                <li><span className="da-hero__points-mark">·</span> Works with Claude Code, Codex, Gemini CLI, Cursor, and Windsurf.</li>
+                <li><span className="da-hero__points-mark">·</span> One MCP surface. Everything stays local.</li>
               </ul>
               <ul className="da-link-list">
                 <li>

@@ -98,7 +98,7 @@ export function Daemon8Mark({ size = 320, variant = "primary" }: MarkProps) {
         textAnchor="middle"
         letterSpacing={size * 0.004}
       >
-        AGENTIC SYSTEM MANAGEMENT
+        SITUATIONAL AWARENESS
       </text>
     </svg>
   );
