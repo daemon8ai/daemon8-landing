@@ -39,12 +39,12 @@ export function HeroLanding() {
                 Situational Awareness For AI Agents
               </h1>
               <ul className="da-hero__points">
-                <li><span className="da-hero__points-mark">·</span> Live-streams logs, browser output, and device events into one observation feed.</li>
-                <li><span className="da-hero__points-mark">·</span> Eight built-in parsers ingest multiple log formats out of the box.</li>
-                <li><span className="da-hero__points-mark">·</span> CLI hooks capture tool calls so agents see cause and effect.</li>
-                <li><span className="da-hero__points-mark">·</span> Checkpoints, lenses, and debug sessions for focused investigation.</li>
-                <li><span className="da-hero__points-mark">·</span> Persistent memory and a librarian index for local context cataloging.</li>
-                <li><span className="da-hero__points-mark">·</span> 29 MCP tools. Every feature opt-in. Everything stays local.</li>
+                <li><span className="da-hero__points-mark">·</span> Point it at a project. Daemon8 detects what kind of project it is and connects to the runtime data it already knows how to find.</li>
+                <li><span className="da-hero__points-mark">·</span> First time it sees a new framework, it asks the agent in your session to investigate and writes what the agent learns back to a local catalog.</li>
+                <li><span className="da-hero__points-mark">·</span> Every subsequent project of that type onboards instantly. The catalog gets richer with use.</li>
+                <li><span className="da-hero__points-mark">·</span> Logs, browser console, network traffic, device events, and agent tool calls land in one observation stream.</li>
+                <li><span className="da-hero__points-mark">·</span> Checkpoints, lenses, debug sessions, and persistent memory carry investigations across sessions.</li>
+                <li><span className="da-hero__points-mark">·</span> One binary. MCP for any agent, HTTP and SSE for anything else. Everything stays local.</li>
               </ul>
               <ul className="da-link-list">
                 <li>

@@ -8,7 +8,7 @@ const SITE_URL = 'https://daemon8.ai'
 const SITE_NAME = 'Daemon8'
 const TITLE = 'Daemon8 — Situational awareness for AI agents'
 const DESCRIPTION =
-  'Daemon8 gives AI agents one place to see logs, errors, browser state, and device events while they work. Local-first. Open source.'
+  'Daemon8 finds your project\'s runtime data and your AI session automatically. It detects the project type, connects to what it already knows about, and asks the agent in-session to teach it the rest. Local-first. Open source.'
 const OG_IMAGE = `${SITE_URL}/assets/brand/social/og-image.png`
 
 const THEME_INIT_SCRIPT = `document.documentElement.classList.add('da-dark');document.documentElement.style.colorScheme='dark';`
