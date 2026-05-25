@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="16" fill="#141210"/>
-  <text x="16" y="22" font-family="Georgia, serif" font-size="18" text-anchor="middle" letter-spacing="-0.5"><tspan fill="#e8e0d4">(</tspan><tspan fill="#C2410C">8</tspan><tspan fill="#e8e0d4">)</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#f4f1ea" rx="8"/>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#141210">(</text>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#c2410c" dx="10">8</text>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#141210" dx="20">)</text>
 </svg>

@@ -63,7 +63,7 @@ export function HeroLanding() {
                   </a>
                 </li>
               </ul>
-              <p className="da-hero__alpha-tag">v0.3 alpha — in active development</p>
+              <p className="da-hero__alpha-tag">alpha version released</p>
             </div>
             <div className="da-hero__mark">
               <span className="da-hero__mark-svg"><Daemon8Mark size={360} /></span>
