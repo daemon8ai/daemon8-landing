@@ -1822,23 +1822,6 @@ html, body { overflow-x: clip; }
   .da-link-list { gap: var(--da-space-4); font-size: 0.75rem; }
 }
 
-/* HERO PROSE */
-.da-hero__prose {
-  margin: 0 0 var(--da-space-8) 0;
-  max-width: 38rem;
-  font-size: clamp(0.875rem, 1vw + 0.6rem, 1.125rem);
-  line-height: 1.6;
-  color: var(--da-ink2);
-}
-
-.da-hero__prose p {
-  margin-bottom: var(--da-space-4);
-}
-
-.da-hero__prose p:last-child {
-  margin-bottom: 0;
-}
-
 .da-hero__alpha-tag {
   margin: var(--da-space-6) 0 var(--da-space-1) 0;
   display: inline-block;

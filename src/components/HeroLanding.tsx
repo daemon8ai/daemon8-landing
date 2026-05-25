@@ -38,14 +38,9 @@ export function HeroLanding() {
               <h1 className="da-hero__title">
                 Situational Awareness For AI Agents
               </h1>
-              <div className="da-hero__prose">
-                <p>
-                  Daemon8 is a local observation layer that bridges the gap between static code and runtime execution for AI agents. It automatically detects project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream.
-                </p>
-                <p>
-                  By exposing real-time telemetry over MCP, agents gain the situational awareness required to debug, verify, and reason about code in motion. Checkpoints and persistent memory carry investigations across sessions. One binary. Everything stays local.
-                </p>
-              </div>
+              <p className="da-hero__subhead">
+                Daemon8 is a local observation layer that bridges the gap between static code and runtime execution for AI agents. It automatically detects project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream. By exposing real-time telemetry over MCP, agents gain the situational awareness required to debug, verify, and reason about code in motion. Checkpoints and persistent memory carry investigations across sessions. One binary. Everything stays local.
+              </p>
               <ul className="da-link-list">
                 <li>
                   <a href={REPO_URL}>
