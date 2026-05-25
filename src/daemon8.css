@@ -1822,62 +1822,21 @@ html, body { overflow-x: clip; }
   .da-link-list { gap: var(--da-space-4); font-size: 0.75rem; }
 }
 
-/* HERO POINTS: bullet-as-sentence list replacing the prose subhead */
-.da-hero__points {
-  list-style: none;
+/* HERO PROSE */
+.da-hero__prose {
   margin: 0 0 var(--da-space-8) 0;
-  padding: 0;
-  max-width: 36rem;
-  font-size: clamp(0.8125rem, 1vw + 0.55rem, 1.0625rem);
-  line-height: 1.55;
+  max-width: 38rem;
+  font-size: clamp(0.875rem, 1vw + 0.6rem, 1.125rem);
+  line-height: 1.6;
   color: var(--da-ink2);
 }
 
-.da-hero__points li {
-  display: flex;
-  gap: 0.6em;
-  padding: var(--da-space-2) 0;
-  border-bottom: 1px solid color-mix(in oklch, var(--da-rule) 60%, transparent);
+.da-hero__prose p {
+  margin-bottom: var(--da-space-4);
 }
 
-.da-hero__points li:last-child { border-bottom: none; }
-
-.da-hero__points-mark {
-  flex: 0 0 auto;
-  color: var(--da-oxide);
-  font-family: var(--da-mono);
-  line-height: inherit;
-}
-
-.da-hero__points-asterisk {
-  color: var(--da-oxide);
-  font-family: var(--da-mono);
-  font-size: 0.85em;
-  margin-left: 0.15em;
-  vertical-align: super;
-  line-height: 0;
-}
-
-.da-hero__points-footnote {
-  margin: var(--da-space-3) 0 var(--da-space-8) 0;
-  font-family: var(--da-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--da-oxide);
-}
-
-.da-hero__points-footnote .da-hero__points-asterisk {
-  vertical-align: baseline;
-  font-size: 1em;
-  margin-left: 0;
-  margin-right: 0.3em;
-}
-
-.da-hero__points-footnote-sep {
-  display: inline-block;
-  margin: 0 0.55em;
-  color: color-mix(in oklch, var(--da-oxide) 60%, transparent);
+.da-hero__prose p:last-child {
+  margin-bottom: 0;
 }
 
 .da-hero__alpha-tag {

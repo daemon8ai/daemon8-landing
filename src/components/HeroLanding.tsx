@@ -38,14 +38,14 @@ export function HeroLanding() {
               <h1 className="da-hero__title">
                 Situational Awareness For AI Agents
               </h1>
-              <ul className="da-hero__points">
-                <li><span className="da-hero__points-mark">·</span> Point it at a project. Daemon8 detects what kind of project it is and connects to the runtime data it already knows how to find.</li>
-                <li><span className="da-hero__points-mark">·</span> First time it sees a new framework, it asks the agent in your session to investigate and writes what the agent learns back to a local catalog.</li>
-                <li><span className="da-hero__points-mark">·</span> Every subsequent project of that type onboards instantly. The catalog gets richer with use.</li>
-                <li><span className="da-hero__points-mark">·</span> Logs, browser console, network traffic, device events, and agent tool calls land in one observation stream.</li>
-                <li><span className="da-hero__points-mark">·</span> Checkpoints, lenses, debug sessions, and persistent memory carry investigations across sessions.</li>
-                <li><span className="da-hero__points-mark">·</span> One binary. MCP for any agent, HTTP and SSE for anything else. Everything stays local.</li>
-              </ul>
+              <div className="da-hero__prose">
+                <p>
+                  Daemon8 is a local observation layer that bridges the gap between static code and runtime execution for AI agents. It automatically detects project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream.
+                </p>
+                <p>
+                  By exposing real-time telemetry over MCP, agents gain the situational awareness required to debug, verify, and reason about code in motion. Checkpoints and persistent memory carry investigations across sessions. One binary. Everything stays local.
+                </p>
+              </div>
               <ul className="da-link-list">
                 <li>
                   <a href={REPO_URL}>
