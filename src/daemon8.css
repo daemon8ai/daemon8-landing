@@ -337,6 +337,14 @@ html, body { overflow-x: clip; }
   max-width: 36rem;
 }
 
+.da-hero__subhead p {
+  margin-bottom: var(--da-space-4);
+}
+
+.da-hero__subhead p:last-child {
+  margin-bottom: 0;
+}
+
 .da-hero__aside {
   display: block;
   margin-top: 0.5rem;

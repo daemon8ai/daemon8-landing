@@ -38,9 +38,14 @@ export function HeroLanding() {
               <h1 className="da-hero__title">
                 Situational Awareness For AI Agents
               </h1>
-              <p className="da-hero__subhead">
-                Daemon8 is a local observation layer that turns scattered logs and provider-agnostic agent conversations into first-class tooling for agentic debugging. It auto-discovers project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream. By converging this context and surfacing it over MCP, your agent gets a 360-degree view of the most important signals through a single tool—one that can leverage query lenses, checkpoints, and SurrealDB-backed SSE subscriptions to carry investigations across sessions. One binary. Everything stays local.
-              </p>
+              <div className="da-hero__subhead">
+                <p>
+                  Daemon8 is a local observation layer that turns scattered logs and provider-agnostic agent conversations into first-class tooling for agentic debugging. It auto-discovers project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream.
+                </p>
+                <p>
+                  By converging this context and surfacing it over MCP, your agent gets a 360-degree view of the most important signals through a single tool—one that can leverage query lenses, checkpoints, and SurrealDB-backed SSE subscriptions to carry investigations across sessions. One binary. Everything stays local.
+                </p>
+              </div>
               <ul className="da-link-list">
                 <li>
                   <a href={REPO_URL}>
