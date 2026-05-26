@@ -39,7 +39,7 @@ export function HeroLanding() {
                 Situational Awareness For AI Agents
               </h1>
               <p className="da-hero__subhead">
-                Daemon8 is a local observation layer that bridges the gap across agent conversations, scattered log output, and live debug behavior. It auto-discovers project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream. By exposing real-time telemetry over MCP, agents gain the situational awareness required to debug, verify, and reason about code in motion. Checkpoints and persistent memory carry investigations across sessions. One binary. Everything stays local.
+                Daemon8 is a local observation layer that bridges the gap across agent conversations, scattered log output, and live debug behavior. It auto-discovers project environments to funnel logs, browser consoles, network traffic, and device events into a single, unified stream. By converging this context and surfacing it over MCP, your agent gets a 360-degree view of everything happening through a single tool—one that can be instantly filtered, checkpointed, and recalled across sessions. One binary. Everything stays local.
               </p>
               <ul className="da-link-list">
                 <li>
