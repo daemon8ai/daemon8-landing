@@ -5,6 +5,7 @@ REPO="daemon8ai/daemon8"
 BINARY="daemon8"
 VERSION="${DAEMON8_VERSION:-latest}"
 INSTALL_DIR="${DAEMON8_INSTALL_DIR:-}"
+GITHUB_API="https://api.github.com/repos/${REPO}"
 
 GREEN="\033[0;32m"
 BLUE="\033[0;34m"
@@ -58,20 +59,59 @@ compute_sha256() {
   fi
 }
 
+extract_tag_name() {
+  sed -n 's/^[[:space:]]*"tag_name":[[:space:]]*"\([^"]*\)".*/\1/p' | head -n 1
+}
+
+resolve_version() {
+  if [ -n "${DAEMON8_RELEASE_BASE_URL:-}" ]; then
+    if [ "$VERSION" != "latest" ]; then
+      echo "$VERSION"
+    else
+      echo "custom"
+    fi
+    return
+  fi
+
+  if [ "$VERSION" != "latest" ]; then
+    echo "$VERSION"
+    return
+  fi
+
+  local tag
+  tag="$(
+    curl -fsSL "${GITHUB_API}/releases/latest" 2>/dev/null | extract_tag_name || true
+  )"
+
+  if [ -z "$tag" ]; then
+    tag="$(
+      curl -fsSL "${GITHUB_API}/releases?per_page=1" 2>/dev/null | extract_tag_name || true
+    )"
+  fi
+
+  if [ -z "$tag" ]; then
+    err "Could not resolve the latest daemon8 release."
+    err "Set DAEMON8_VERSION to a tag, for example: DAEMON8_VERSION=vX.Y.Z-alpha.N"
+    exit 1
+  fi
+
+  echo "$tag"
+}
+
 download_url() {
   local target="$1"
-  if [ "$VERSION" = "latest" ]; then
-    echo "https://github.com/${REPO}/releases/latest/download/${BINARY}-${target}.tar.gz"
+  if [ -n "${DAEMON8_RELEASE_BASE_URL:-}" ]; then
+    echo "${DAEMON8_RELEASE_BASE_URL%/}/${BINARY}-${target}.tar.gz"
   else
-    echo "https://github.com/${REPO}/releases/download/${VERSION}/${BINARY}-${target}.tar.gz"
+    echo "https://github.com/${REPO}/releases/download/${RESOLVED_VERSION}/${BINARY}-${target}.tar.gz"
   fi
 }
 
 checksums_url() {
-  if [ "$VERSION" = "latest" ]; then
-    echo "https://github.com/${REPO}/releases/latest/download/checksums.sha256"
+  if [ -n "${DAEMON8_RELEASE_BASE_URL:-}" ]; then
+    echo "${DAEMON8_RELEASE_BASE_URL%/}/checksums.sha256"
   else
-    echo "https://github.com/${REPO}/releases/download/${VERSION}/checksums.sha256"
+    echo "https://github.com/${REPO}/releases/download/${RESOLVED_VERSION}/checksums.sha256"
   fi
 }
 
@@ -83,6 +123,7 @@ if [ "${DAEMON8_INSTALLER_SELF_TEST:-}" = "1" ]; then
 fi
 
 TARGET="$(detect_target)"
+RESOLVED_VERSION="$(resolve_version)"
 resolve_install_dir
 
 step 1 $TOTAL_STEPS "Download"
@@ -90,6 +131,7 @@ step 1 $TOTAL_STEPS "Download"
 URL="$(download_url "$TARGET")"
 ARCHIVE_NAME="${BINARY}-${TARGET}.tar.gz"
 dim "Platform: $TARGET"
+dim "Version:  $RESOLVED_VERSION"
 dim "Source:   $URL"
 
 TMPDIR="$(mktemp -d)"
@@ -190,14 +232,12 @@ esac
 
 step 4 $TOTAL_STEPS "Service"
 echo ""
-if "$INSTALL_DIR/$BINARY" service install; then
-  ok "Daemon8 service installed and running"
-else
+if [ "${DAEMON8_INSTALLER_SKIP_SERVICE:-}" = "1" ]; then
+  ok "Service install skipped"
+  exit 0
+fi
+
+if ! "$INSTALL_DIR/$BINARY" service install; then
   err "Service install failed. Try again with: $INSTALL_DIR/$BINARY service install"
   exit 1
 fi
-
-echo ""
-dim "Daemon8 is now running as the local MCP server."
-dim "Start a fresh AI CLI/REPL session and check that daemon8 appears in the MCP server list."
-dim "Inside a project, initialize source config only when daemon8 asks: daemon8 init"

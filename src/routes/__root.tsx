@@ -21,7 +21,7 @@ const STRUCTURED_DATA = JSON.stringify({
   url: SITE_URL,
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'macOS, Linux, Windows',
-  softwareVersion: '0.3-alpha',
+  softwareVersion: '0.5.0-alpha.5',
   releaseNotes: 'In active development. APIs may change.',
   offers: {
     '@type': 'Offer',
